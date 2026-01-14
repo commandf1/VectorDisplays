@@ -29,3 +29,8 @@ jobs:
           distribution: 'graalvm'
       - name: Build
         run: ./gradlew clean build
+      - name: Upload
+        uses: actions/upload-artifact@v6
+        with:
+          name: built
+          path: "."
